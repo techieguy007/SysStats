@@ -19,3 +19,7 @@ The application will spin up with `docker-compose up --build` command.
 
 
 ![Picture1](https://user-images.githubusercontent.com/8210555/204766824-8425f19b-666a-4a11-8722-c5229f65d49f.jpg)
+
+Demo of the application
+
+![Picture1] (../img/readme.jpg)
