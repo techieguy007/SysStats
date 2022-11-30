@@ -22,4 +22,4 @@ The application will spin up with `docker-compose up --build` command.
 
 Demo of the application
 
-![Picture1] (../img/readme.jpg)
+![Picture1](img/readme.jpg)
