@@ -1,5 +1,6 @@
-# spinning up api and client services
+# spinning up api client and proxy services
 services:
+# api service (api service provides cpu and ram data to the api client)
   api:
     build:
       context: .
@@ -7,6 +8,7 @@ services:
     image: sysstats-api
     ports:
       - "5000:5000"
+# api client service (api client service is actually react app which fetches data from api service and displays it)
   client:
     build:
       context: .
@@ -14,6 +16,10 @@ services:
     image: sysstats-client
     ports:
       - "3000:3000"
+# proxy service (proxy service is used to redirect http requests to api client service)
+# this is needed because react app is served from a different port than the main app
+# and we don't want to expose api client service to the outside world
+# so we redirect all requests to the main app to the api client service
   proxy:
     build:
       context: .
