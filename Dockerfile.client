@@ -1,0 +1,7 @@
+FROM node:16-alpine
+WORKDIR /app
+COPY sys-stats/package.json sys-stats/yarn.lock ./
+COPY sys-stats/src ./src
+COPY sys-stats/public ./public
+RUN npm i
+CMD ["npm", "run", "start"]

@@ -1,0 +1,26 @@
+# spinning up api and client services
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    image: sysstats-api
+    ports:
+      - "5000:5000"
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    image: sysstats-client
+    ports:
+      - "3000:3000"
+  proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile.proxy
+    image: sysstats-proxy
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+      - client
