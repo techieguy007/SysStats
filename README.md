@@ -21,4 +21,8 @@ The application will spin up with `docker-compose up --build` command.
 
 Demo of the application
 
-![Picture1](img/localhost.jpg)
+![Picture1](img/server.jpg)
+
+Azure vm settings
+
+![Picture1](img/vm_setting.jpg)
